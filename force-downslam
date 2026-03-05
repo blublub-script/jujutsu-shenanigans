@@ -1,0 +1,15 @@
+local rs = game:GetService("ReplicatedStorage")
+local plr = game.Players.LocalPlayer
+local rem = rs.Knit.Knit.Services:FindFirstChild(plr:GetAttribute("Moveset").."Service").RE.Activated
+local old
+old = hookmetamethod(game, "__namecall", function(self, ...)
+local m = getnamecallmethod()
+local a = { ... }
+if self == rem and m == "FireServer" then
+if a[1] == false then
+a[1] = "Down"
+end
+return old(self, unpack(a))
+end
+return old(self, ...)
+end) 
