@@ -3,3 +3,5 @@
 Invisible block: Jack
 
 Nanami Auto ratio: ?
+
+Todo Preserve Rotation: i.am.an.agent
